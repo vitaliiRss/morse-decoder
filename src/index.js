@@ -46,8 +46,6 @@ function decode(expr) {
     }
 
     for (const item of stringToArray) {
-        console.log(item);
-
         let stringOf2Characters = '';
 
         for (let j = 0; j < item.length; j = j + 2) {
@@ -67,8 +65,6 @@ function decode(expr) {
             if (item[j] + item[j + 1] === '11') {
                 stringOf2Characters = stringOf2Characters + '-';
             }
-
-            console.log(stringOf2Characters);
         }
 
         encryptedWord = `${encryptedWord}${stringOf2Characters !== ' ' ? MORSE_TABLE[stringOf2Characters] : ' '}`;
